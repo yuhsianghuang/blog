@@ -6,7 +6,7 @@ permalink:           pretty
 # Setup
 title:               Forward
 tagline:             'Yu-Hsiang Huang'
-description:         'It\'s a place to write down what all I have seen.'
+description:         'It is the place to write down what all I have seen.'
 url:                 https://yuhsianghuang.github.io/blog
 baseurl:             '/blog'
 paginate:            5

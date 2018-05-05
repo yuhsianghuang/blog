@@ -53,9 +53,9 @@ title: Attentional Multilabel Learning over Graphs
 
     - train/valid/test = 0.6/0.2/0.2
     - Assay ID in 9cancer dataset:
-        |--------+---------+--------|
+
         |Assay ID |Cancer Type |Positive Percentage|
-        |--|--|--|
+        | ------------- |:-------------:| -----:|
         |1 |Lung |12.28|
         |33 |Melanoma |9.97|
         |41 |Prostate |11.77|
@@ -66,6 +66,11 @@ title: Attentional Multilabel Learning over Graphs
         |123 |Leukemia |18.91|
         |145 |Renal |12.03|
 
+    - When the number of propagation layer larger than 6, the improvement rate becomes steady and the model is more likely to overfit.
+        - 2 Hypothesis from author:
+            - (i) the structure information from distant nodes is much less important than that from close neighbors;
+            - (ii) the structure information at every node becomes more global and indistinguishable, causing difficulty for the model to detect meaningful substructures during prediction.
+        - Since there are label nodes for shorting the distance, there is no need to propagate for too many times.
 
 ### Thoughts
 - The label node design is intuitive and helps easing the message passing and alleviate the compression.

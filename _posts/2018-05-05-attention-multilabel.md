@@ -36,4 +36,5 @@ title: Attentional Multilabel Learning over Graphs
 
 
 ### Thoughts
+- The label node design is intuitive and helps easing the message passing and alleviate the compression.
 

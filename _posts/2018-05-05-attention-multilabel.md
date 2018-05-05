@@ -76,4 +76,5 @@ title: Attentional Multilabel Learning over Graphs
 
 ### Thoughts
 - The label node design is intuitive and helps easing the message passing and alleviate the compression.
+- Following the thought of message passing framework, it is easy to imagine have a class-specific readout function. This paper, however, includes the class information earlier in the message passing phase which resulting a better class awared message aggregation.
 

@@ -52,17 +52,19 @@ title: Attentional Multilabel Learning over Graphs
                 - The average number of proteins to which one ligand binds is 1.35.
 
     - train/valid/test = 0.6/0.2/0.2
-|Assay ID |Cancer Type |Positive Percentage|
-|--|--|--|
-|1 |Lung |12.28|
-|33 |Melanoma |9.97|
-|41 |Prostate |11.77|
-|47 |Central Nervous System |12.22|
-|81 |Colon |14.50|
-|83 |Breast |16.22|
-|109 |Ovarian |12.76|
-|123 |Leukemia |18.91|
-|145 |Renal |12.03|
+    - Assay ID in 9cancer dataset:
+        |--------+---------+--------|
+        |Assay ID |Cancer Type |Positive Percentage|
+        |--|--|--|
+        |1 |Lung |12.28|
+        |33 |Melanoma |9.97|
+        |41 |Prostate |11.77|
+        |47 |Central Nervous System |12.22|
+        |81 |Colon |14.50|
+        |83 |Breast |16.22|
+        |109 |Ovarian |12.76|
+        |123 |Leukemia |18.91|
+        |145 |Renal |12.03|
 
 
 ### Thoughts

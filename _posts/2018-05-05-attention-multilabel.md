@@ -71,6 +71,8 @@ title: Attentional Multilabel Learning over Graphs
             - (i) the structure information from distant nodes is much less important than that from close neighbors;
             - (ii) the structure information at every node becomes more global and indistinguishable, causing difficulty for the model to detect meaningful substructures during prediction.
         - Since there are label nodes for shorting the distance, there is no need to propagate for too many times.
+    - The input-to-label attention seems to be redundant and causes misleading to the model.
+    - The label-to-input attention is important as it helps the label nodes focus on particular substructures of the input graph to give accurate prediction. 
 
 ### Thoughts
 - The label node design is intuitive and helps easing the message passing and alleviate the compression.

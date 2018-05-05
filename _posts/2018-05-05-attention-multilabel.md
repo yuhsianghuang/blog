@@ -21,9 +21,17 @@ title: Attentional Multilabel Learning over Graphs
     - Attention pooling is applied on the messages between class nodes and the input nodes.
         - input to class attention and class to input attention.
         - Average pooling is applied on the messages bewteen input nodes.
+        - Two labels can indirectly interact with each other after two step of updates.
+        - The initial hidden vector of a class node is the same among different instances (Simply an embedding lookup).
+            - Class node actually works a pseudo node to short the distance between inputs nodes to facilitate the message exchange process.
+                - Correlate with a class by using the class node vector for classification.
+                    - Good for to have insight on the difference between classes.
+                    - Alleviate the information compression into a single graph vector.
+
     - Using the final class node vector for each binary classification.
         - The classifier is shared among all classes.
 - Hierarchical attention is proposed to deal with large number of classes and huge graph.
+    - K (K ≪ min{|V|, C}) intermediate attentional factors are introduced.
 - In order to perform well on this task, two correlation structures must be captured
 
 

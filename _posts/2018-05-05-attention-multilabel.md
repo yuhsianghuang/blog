@@ -27,12 +27,42 @@ title: Attentional Multilabel Learning over Graphs
                 - Correlate with a class by using the class node vector for classification.
                     - Good for to have insight on the difference between classes.
                     - Alleviate the information compression into a single graph vector.
+                    - Also provide a class correlated encoded vector.
 
     - Using the final class node vector for each binary classification.
         - The classifier is shared among all classes.
 - Hierarchical attention is proposed to deal with large number of classes and huge graph.
     - K (K ≪ min{|V|, C}) intermediate attentional factors are introduced.
 - In order to perform well on this task, two correlation structures must be captured
+- Experiments:
+    - Datasets:
+        - 9cancers:
+            - Drug activity against nine types of cancer.
+            - Binary indicating whether there is a response, i.e., the drug reduces or prevents tumor growth.
+            - Collect from 9 different datasets in PubChem.
+            - 22 thousand molecules in total.
+            - 3,356 molecules active for at least one type of cancer. 
+            - Formed with **all** the active molecules and 10,000 fully inactive molecules.
+
+        - 50proteins:
+            - Drug-protein binding prediction.
+            - Proteins are labels.
+            - Top 50 proteins that are bound by most ligands are selected.
+            - 36,349 ligands in total 
+                - The average number of proteins to which one ligand binds is 1.35.
+
+    - train/valid/test = 0.6/0.2/0.2
+|Assay ID |Cancer Type |Positive Percentage|
+|--|--|--|
+|1 |Lung |12.28|
+|33 |Melanoma |9.97|
+|41 |Prostate |11.77|
+|47 |Central Nervous System |12.22|
+|81 |Colon |14.50|
+|83 |Breast |16.22|
+|109 |Ovarian |12.76|
+|123 |Leukemia |18.91|
+|145 |Renal |12.03|
 
 
 ### Thoughts

@@ -12,9 +12,9 @@ title: Attentional Multilabel Learning over Graphs
 - Treat classes as nodes (termed as **label node**) and include them in to the message passing framework.
     - Four kinds of Message Passing:
         - input-input
+        - label-label
         - input-label
         - label-input
-        - label-label
     - Therefore, classes also have an associated embedding.
     - Class nodes are connected to all the graph nodes.
     - To learn the label-label and label-substructure relationship.
@@ -31,9 +31,12 @@ title: Attentional Multilabel Learning over Graphs
 
     - Using the final class node vector for each binary classification.
         - The classifier is shared among all classes.
+        - Unaware of difference of classes, force the model to learn better class-aware encoded vector in the message passing phase.
 - Hierarchical attention is proposed to deal with large number of classes and huge graph.
-    - K (K ≪ min{|V|, C}) intermediate attentional factors are introduced.
-- In order to perform well on this task, two correlation structures must be captured
+    - Introduce intermediate attentional factors for reduce the computation cost.
+
+- In order to perform well on this task, two correlation structures must be captured: those within the label set and those between the label set and input subgraphs.
+
 - Experiments:
     - Datasets:
         - 9cancers:
@@ -76,5 +79,4 @@ title: Attentional Multilabel Learning over Graphs
 
 ### Thoughts
 - The label node design is intuitive and helps easing the message passing and alleviate the compression.
-- Following the thought of message passing framework, it is easy to imagine have a class-specific readout function. This paper, however, includes the class information earlier in the message passing phase which resulting a better class awared message aggregation.
-
+- Following the thought of message passing framework, it is easy to imagine to have a class-specific readout function. This paper, however, includes the class information earlier in the message passing phase which results in a better, class-awared message aggregation.

@@ -12,9 +12,21 @@ title: Attentional Multilabel Learning over Graphs
 - Treat classes as nodes (termed as **label node**) and include them in to the message passing framework.
     - Four kinds of Message Passing:
         - input-input
+            - Message Passing: Edge network?
+            - Message Aggregation: Average Pooling
+            - Node Update: Highway
         - label-label
+            - Message Passing: Edge network?
+            - Message Aggregation: Average Pooling
+            - Node Update: Highway
         - input-label
+            - Message Passing: Edge network?
+            - Message Aggregation: Attention
+            - Node Update: Highway
         - label-input
+            - Message Passing: Edge network?
+            - Message Aggregation: Attention
+            - Node Update: Highway
     - Therefore, classes also have an associated embedding.
     - Class nodes are connected to all the graph nodes.
     - To learn the label-label and label-substructure relationship.

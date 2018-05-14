@@ -19,5 +19,10 @@ title: Interpretable Drug Target Prediction Using Deep Neural Representation
         - Drug: Atom hidden vectors
         - Target: Hidden vectors generated from RNN.
     - A soft alignment matrix is first obtained with the following equation:
-        - $$A = tanh(P^TUD)$$
-        
+        - $A = tanh(P^TUD)$
+    - Apply Max pooling columnwise and rowwise.
+    - Apply Softmax on the resulting value as attention weight.
+- Siamese Network is used to inference.
+    - Dot product on two input vectors.
+    - Activate with sigmoid function to normalize the value into [0, 1] range.
+- Loss function: Negative Loglikelihood.

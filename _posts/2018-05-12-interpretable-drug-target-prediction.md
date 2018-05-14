@@ -26,3 +26,8 @@ title: Interpretable Drug Target Prediction Using Deep Neural Representation
     - Dot product on two input vectors.
     - Activate with sigmoid function to normalize the value into [0, 1] range.
 - Loss function: Negative Loglikelihood.
+- Dataset:
+    - 39,747 positive examples and 31,218 negative examples extracted from BindingDB.
+- Interpretability:
+    - case study of a top predicted interaction between chemical (PubChem ID: 117793281) and protein (UniProt ID: Q9HBH9)
+    - by comparing this interpretation with that obtained by molecular docking, which is currently more biologically interpretable.
